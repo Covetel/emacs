@@ -2,6 +2,7 @@
 (require 'org-latex)
 (unless (boundp 'org-export-latex-classes)
   (setq org-export-latex-classes nil))
+
 (add-to-list 'org-export-latex-classes
           '("koma-book"
              "\\documentclass{scrbook}
@@ -29,6 +30,8 @@
              ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
              ("\\paragraph{%s}" . "\\paragraph*{%s}")
              ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+
+
 
 (setq custom-file "~/.emacs-custom.el")
 (load custom-file)
