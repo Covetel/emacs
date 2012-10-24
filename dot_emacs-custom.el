@@ -14,7 +14,8 @@
  '(keyboard-coding-system (quote utf-8-unix))
  '(tool-bar-mode nil)
   '(woman-locale "es_ES.UTF-8"))
-(custom-set-faces
+
+;;(custom-set-faces
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
@@ -22,7 +23,7 @@
 ; '(default ((t (:stipple nil :background "darkslategrey" :foreground "wheat" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 122 :width normal :foundry "xos4" :family "Terminus")))))
 
 ;; Turn on auto fill mode automatically in al modes 
-(set auto-fill-mode 1)
+(auto-fill-mode 1)
 (setq-default fill-column 78)
 
 ;; highlight current line minor mode
