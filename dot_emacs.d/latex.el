@@ -3,6 +3,12 @@
 (unless (boundp 'org-export-latex-classes)
   (setq org-export-latex-classes nil))
 
+;; Activate RefTex, cross-reference, bibliography and glossary.
+(add-hook 'LaTeX-mode-hook 'turn-on-reftex)
+(org-babel-do-load-languages 
+ 'org-babel-load-languages
+ '((latex . t)))
+
 (add-to-list 'org-export-latex-classes
           '("koma-book"
              "\\documentclass{scrbook}

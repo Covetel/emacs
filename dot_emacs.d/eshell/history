@@ -1,0 +1,7 @@
+cd /tmp/
+ls
+wget http://cx4a.org/pub/auto-complete/auto-complete-1.3.1.tar.bz2
+tar -jxvf auto-complete-1.3.1.tar.bz2  
+cd auto-complete-1.3.1/ 
+ls
+pwd
