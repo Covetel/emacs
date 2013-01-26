@@ -1,69 +1,36 @@
 ;; CFEngine
 (autoload 'cfengine-mode "cfengine" "cfengine editing" t)
 (add-to-list 'load-path "~/.emacs.d/elisp/")
-(add-to-list 'auto-mode-alist '("\\.cf\\'" . cfengine-mode))
+(add-to-list 'auto-mode-alist '("\\.cf\\'" . cfengine3-mode))
 
-
-;; org-mode exporter latex
-(require 'org-latex)
-(unless (boundp 'org-export-latex-classes)
-  (setq org-export-latex-classes nil))
-
-(add-to-list 'org-export-latex-classes
-          '("koma-book"
-             "\\documentclass{scrbook}
-	     \\usepackage[spanish]{babel}
-
-	     \\usepackage{geometry}
-	     \\usepackage{lastpage}
-	     \\geometry{	
-	      headsep=12mm	
-	      }
- 	     \\usepackage{graphicx}
-	     \\usepackage[ilines, komastyle]{scrpage2}
-	     \\pagestyle{scrheadings}	     
-	     \\clearscrheadfoot
-	     \\ihead[ 
-	     	      \\includegraphics{/tmp/covetel_pdf.png} 
-		      ]{
-		      \\includegraphics{/tmp/covetel_pdf.png}
-		      }
-	     \\cfoot[ \\pagemark/\\pageref{LastPage} ]{ \\pagemark/\\pageref{LastPage} }"
-	     
-             ("\\chapter{%s}" . "\\chapter{%s}")
-	     ("\\section{%s}" . "\\section*{%s}")
-             ("\\subsection{%s}" . "\\subsection*{%s}")
-             ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-             ("\\paragraph{%s}" . "\\paragraph*{%s}")
-             ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
-
-(add-to-list 'org-export-latex-classes
-          '("koma-book-walter"
-             "\\documentclass{scrbook}
-	     \\usepackage[spanish]{babel}
-
-	     \\usepackage{geometry}
-	     \\usepackage{lastpage}
-	     \\geometry{	
-	      headsep=12mm	
-	      }
- 	     \\usepackage{graphicx}
-	     \\usepackage[ilines, komastyle]{scrpage2}
-	     \\pagestyle{scrheadings}	     
-	     \\clearscrheadfoot
-	     \\ihead[ 
-	     	     
-		      ]{
-		     
-		      }
-	     \\cfoot[ \\pagemark/\\pageref{LastPage} ]{ \\pagemark/\\pageref{LastPage} }"
-	     
-             ("\\chapter{%s}" . "\\chapter{%s}")
-	     ("\\section{%s}" . "\\section*{%s}")
-             ("\\subsection{%s}" . "\\subsection*{%s}")
-             ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-             ("\\paragraph{%s}" . "\\paragraph*{%s}")
-             ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
-
+;; Load configurations 
 (setq custom-file "~/.emacs-custom.el")
+(setq latex-config-file "~/.emacs.d/latex.el")
 (load custom-file)
+(load latex-config-file)
+
+;; autocomplete 
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/elisp/ac-dict")
+(ac-config-default)
+
+;; CSS
+(autoload 'css-mode "css-mode" "Mode for editing CSS files" t)
+
+(setq auto-mode-alist
+       (append '(("\\.css$" . css-mode))
+               auto-mode-alist))
+
+;; Perl
+(mapc
+     (lambda (pair)
+       (if (eq (cdr pair) 'perl-mode)
+           (setcdr pair 'cperl-mode)))
+     (append auto-mode-alist interpreter-mode-alist))
+
+(custom-set-faces
+ '(cperl-array-face ((t (:weight normal))))
+ '(cperl-hash-face ((t (:weight normal))))
+)
+
+
