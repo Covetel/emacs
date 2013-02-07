@@ -41,15 +41,17 @@
          
              \\titleformat{\\chapter}
              {\\color{covetelred}\\Huge\\bfseries}
-             {}{0.1em}{}
+             {\\color{covetelred}\\Huge\\bfseries\\thechapter}{1em}{}
              
              \\titleformat{\\section}
              {\\color{covetelred}\\LARGE\\bfseries}
-             {}{0.1em}{}
+             {\\color{covetelred}\\LARGE\\bfseries\\thesection}{1em}{}
+             
 
              \\titleformat{\\subsection}
              {\\color{covetelred}\\Large\\bfseries}
-             {}{0.1em}{}
+             {\\color{covetelred}\\Large\\bfseries\\thesubsection}{1em}{}
+
 
 %% end makeover 
 
@@ -57,9 +59,9 @@
 	     \\pagestyle{scrheadings}	     
 	     \\clearscrheadfoot
 	     \\ihead[ 
-	     	      \\includegraphics{/tmp/covetel_pdf.png} 
+	     	      \\includegraphics{covetel_pdf.png} 
 		      ]{
-		      \\includegraphics{/tmp/covetel_pdf.png}
+		      \\includegraphics{covetel_pdf.png}
 		      }
 	     \\cfoot[ \\pagemark/\\pageref{LastPage} ]{ \\pagemark/\\pageref{LastPage} }"
 	     

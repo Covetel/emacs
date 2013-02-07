@@ -32,5 +32,3 @@
  '(cperl-array-face ((t (:weight normal))))
  '(cperl-hash-face ((t (:weight normal))))
 )
-
-
