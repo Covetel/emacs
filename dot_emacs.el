@@ -38,18 +38,19 @@
  '(cperl-hash-face ((t (:weight normal))))
 )
 
-;; org2blog -- org-mode to wordpress
-(setq load-path (cons "~/.emacs.d/elisp/org2blog/" load-path))
-(require 'xml-rpc)
-(require 'org2blog-autoloads)
-
-(setq org2blog/wp-blog-alist
-      '(("wordpress"
-	 :url "http://waltervargas.me/xmlrpc.php"
-	 :username "waltervargas@gmail.com"
-	 :default-title "Hello World"
-	 :default-categories ("Computing" "Linux")
-	 :tags-as-categories nil)
-	("my-blog"
-	 :url "http://waltervargas.me/xmlrpc.php"
-	 :username "waltervargas")))
+;;;; org2blog -- org-mode to wordpress
+;;(setq load-path (cons "~/.emacs.d/elisp/org2blog/" load-path))
+;;(require 'xml-rpc)
+;;(require 'org2blog-autoloads)
+;;
+;;(setq org2blog/wp-blog-alist
+;;      '(("wordpress"
+;;	 :url "http://waltervargas.me/xmlrpc.php"
+;;	 :username "waltervargas@gmail.com"
+;;	 :default-title "Hello World"
+;;	 :default-categories ("Computing" "Linux")
+;;	 :tags-as-categories nil)
+;;	("my-blog"
+;;	 :url "http://waltervargas.me/xmlrpc.php"
+;;	 :username "waltervargas")))
+;;
