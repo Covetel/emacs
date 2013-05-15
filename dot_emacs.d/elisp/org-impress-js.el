@@ -1147,6 +1147,7 @@ PUB-DIR is set, use this as the publishing directory."
 				(file-name-sans-extension
 				 (file-name-nondirectory buffer-file-name)))
 			   "UNTITLED")))
+
 	 (link-up (and (plist-get opt-plist :link-up)
 		       (string-match "\\S-" (plist-get opt-plist :link-up))
 		       (plist-get opt-plist :link-up)))
@@ -1331,12 +1332,10 @@ PUB-DIR is set, use this as the publishing directory."
 </div>
 
 <div id=\"title\" class=\"step slide\" data-x=\"0\" data-y=\"0\">"
+		"<div id='logo'></div>"
 		"<h1 class=\"title\">" title "</h1>"
-		"<div class=\"author\">" author "</div>"
+		"<div class=\"author\">" author "<span class=\"email\">&lt;"email"&gt;</span></div>"
 		"<div class=\"date\">" date "</div>"
-		"<div class=\"creator\">"
-		"Org version " (org-version) " with Emacs version " (number-to-string emacs-major-version)
-		"</div>"
 		"</div>"))
 
       ;; insert body
@@ -1435,6 +1434,9 @@ PUB-DIR is set, use this as the publishing directory."
       (org-init-section-numbers)
 
       (org-open-par)
+      
+      
+
 
       (while (setq org-line (pop lines) origline org-line)
 	(catch 'nextline

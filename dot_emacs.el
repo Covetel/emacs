@@ -39,7 +39,7 @@
 )
 
 ;; org2blog -- org-mode to wordpress
-(setq load-path (cons "~/.emacs.d/org2blog/" load-path))
+(setq load-path (cons "~/.emacs.d/elisp/org2blog/" load-path))
 (require 'xml-rpc)
 (require 'org2blog-autoloads)
 
