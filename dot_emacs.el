@@ -1,6 +1,8 @@
+;; Load path
+(add-to-list 'load-path "~/.emacs.d/elisp/")
+
 ;; CFEngine
 (autoload 'cfengine-mode "cfengine" "cfengine editing" t)
-(add-to-list 'load-path "~/.emacs.d/elisp/")
 (add-to-list 'auto-mode-alist '("\\.cf\\'" . cfengine3-mode))
 
 ;; Load configurations 
@@ -8,6 +10,9 @@
 (setq latex-config-file "~/.emacs.d/latex.el")
 (load custom-file)
 (load latex-config-file)
+
+;; Impresjs from org-mode
+(require 'org-impress-js)
 
 ;; autocomplete 
 (require 'auto-complete-config)
@@ -32,3 +37,19 @@
  '(cperl-array-face ((t (:weight normal))))
  '(cperl-hash-face ((t (:weight normal))))
 )
+
+;; org2blog -- org-mode to wordpress
+(setq load-path (cons "~/.emacs.d/org2blog/" load-path))
+(require 'xml-rpc)
+(require 'org2blog-autoloads)
+
+(setq org2blog/wp-blog-alist
+      '(("wordpress"
+	 :url "http://waltervargas.me/xmlrpc.php"
+	 :username "waltervargas@gmail.com"
+	 :default-title "Hello World"
+	 :default-categories ("Computing" "Linux")
+	 :tags-as-categories nil)
+	("my-blog"
+	 :url "http://waltervargas.me/xmlrpc.php"
+	 :username "waltervargas")))
