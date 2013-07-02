@@ -59,9 +59,9 @@
 	     \\pagestyle{scrheadings}	     
 	     \\clearscrheadfoot
 	     \\ihead[ 
-	     	      \\includegraphics{covetel_pdf.png} 
+	     	      \\includegraphics{/usr/share/covetel-doc/imgs/covetel_pdf} 
 		      ]{
-		      \\includegraphics{covetel_pdf.png}
+		      \\includegraphics{/usr/share/covetel-doc/imgs/covetel_pdf}
 		      }
 	     \\cfoot[ \\pagemark/\\pageref{LastPage} ]{ \\pagemark/\\pageref{LastPage} }"
 	     
@@ -88,9 +88,9 @@
 	     \\pagestyle{scrheadings}	     
 	     \\clearscrheadfoot
 	     \\ihead[ 
-	     	      \\includegraphics{/tmp/covetel_pdf.png} 
+	     	      \\includegraphics{/usr/share/covetel-doc/imgs/covetel_pdf} 
 		      ]{
-		      \\includegraphics{/tmp/covetel_pdf.png}
+		      \\includegraphics{/usr/share/covetel-doc/imgs/covetel_pdf}
 		      }
 	     \\cfoot[ \\pagemark/\\pageref{LastPage} ]{ \\pagemark/\\pageref{LastPage} }"
 	     
