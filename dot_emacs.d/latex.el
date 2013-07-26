@@ -128,3 +128,76 @@
              ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
              ("\\paragraph{%s}" . "\\paragraph*{%s}")
              ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+
+(add-to-list 'org-export-latex-classes
+    '("cantv"
+        "\\documentclass{scrbook}
+	    \\usepackage[spanish]{babel}
+
+	    \\usepackage{geometry}
+	    \\usepackage{lastpage}
+
+	    \\geometry{	
+	        headsep=12mm	
+	    }
+ 	    \\usepackage{graphicx}
+
+            \\usepackage[usenames,dvipsnames]{color}
+            \\usepackage{titlesec}
+           
+%% Makeover cantv 
+  
+            \\usepackage{xcolor}
+            \\usepackage{lmodern}
+            \\renewcommand*{\\familydefault}{\\sfdefault}
+
+         
+            \\titleformat{\\chapter}
+            {\\color{black}\\Huge\\bfseries}
+            {\\color{black}\\Huge\\bfseries\\thechapter}{1em}{}
+            
+            \\titleformat{\\section}
+            {\\color{black}\\LARGE\\bfseries}
+            {\\color{black}\\LARGE\\bfseries\\thesection}{1em}{}
+            
+
+            \\titleformat{\\subsection}
+            {\\color{black}\\Large\\bfseries}
+            {\\color{black}\\Large\\bfseries\\thesubsection}{1em}{}
+
+
+%% end makeover 
+
+	    \\usepackage[ilines, komastyle]{scrpage2}
+	    \\pagestyle{scrheadings}	     
+	    \\clearscrheadfoot
+	    \\ihead[ 
+            \\vspace{0cm}
+            \\hspace{11cm}
+	     	\\includegraphics{/usr/share/covetel-doc/imgs/logo-cantv} 
+		]{
+            \\vspace{0cm}
+            \\hspace{11cm}
+		    \\includegraphics{/usr/share/covetel-doc/imgs/logo-cantv}
+		}
+	    \\cfoot[ 
+            \\vspace{1.5cm}
+            \\hspace{0cm}
+            \\pagemark/\\pageref{LastPage} 
+         ]{ 
+            \\vspace{1.5cm}
+            \\hspace{0cm}
+            \\pagemark/\\pageref{LastPage} 
+         }
+        \\ifoot[ 
+	        \\includegraphics{/usr/share/covetel-doc/imgs/footer_cantv} 
+		]{
+		    \\includegraphics{/usr/share/covetel-doc/imgs/footer_cantv}
+		}"
+	     
+             ("\\chapter{%s}" . "\\chapter{%s}")
+	     ("\\section{%s}" . "\\section*{%s}")
+             ("\\subsection{%s}" . "\\subsection*{%s}")
+             ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+             ("\\paragraph{%s}" . "\\paragraph*{%s}")
+             ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
