@@ -15,6 +15,9 @@
  'org-babel-load-languages
  '((latex . t)))
 
+;; Numbering references to sections
+(setq org-export-latex-hyperref-format "\\ref{%s}")
+
 (add-to-list 'org-export-latex-classes
           '("covetel"
              "\\documentclass{scrbook}
