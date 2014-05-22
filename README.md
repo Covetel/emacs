@@ -5,7 +5,9 @@
 ### Add the repo `emacs.naquadah.org`
 
 ```bash
-$ echo "deb http://mirror:3142/emacs.naquadah.org/ stable/" >> /etc/apt/sources.list
+$ sudo su
+# echo "deb http://mirror:3142/emacs.naquadah.org/ stable/" >> /etc/apt/sources.list
+# exit
 $ sudo apt-get update
 ```
 
