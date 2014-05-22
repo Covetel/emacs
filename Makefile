@@ -6,7 +6,7 @@ backup:
 clean:
 	rm -v -f -R $(HOME)/.emacs
 	rm -v -f $(HOME)/.emacs-custom.el
-	rm -v f $(HOME)/.emacs.d
+	rm -v -f $(HOME)/.emacs.d
 
 emacs:
 	ln -s $(CURDIR)/dot_emacs.el $(HOME)/.emacs
