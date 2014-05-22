@@ -2,16 +2,16 @@
 
 ## Install `emacs-snapshot`
 
-1. Add the repo `emacs.naquadah.org`
+### Add the repo `emacs.naquadah.org`
 
-	```bash
+```bash
 $ echo "deb http://mirror:3142/emacs.naquadah.org/ stable/" >> /etc/apt/sources.list
 $ sudo apt-get update
 ```
 
-1. Install emacs-snapshot
+### Install emacs-snapshot
 
-	```bash
+```bash
 $ sudo apt-get -y install emacs-snapshot
 ```
 
