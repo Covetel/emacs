@@ -14,7 +14,7 @@ $ sudo apt-get update
 ### Install emacs-snapshot
 
 ```
-$ sudo apt-get -y install emacs-snapshot
+$ sudo apt-get -y --force-yes install emacs-snapshot
 ```
 
 ## Clone
