@@ -19,7 +19,7 @@ $ sudo apt-get -y --force-yes install emacs-snapshot
 
 ## Clone
 ```
-$ git clone git@github.com:Covetel/emacs.git
+$ git clone https://github.com/Covetel/emacs.git
 ```
 
 ## Then
